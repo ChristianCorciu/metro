@@ -1,3 +1,7 @@
+// Configuration globale pour Jest
 jest.setTimeout(10000);
 
-process.env.NODE_ENV = 'test';
+// Si vous avez besoin de nettoyer après chaque test
+afterEach(() => {
+  jest.clearAllMocks();
+});
